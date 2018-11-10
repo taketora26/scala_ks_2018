@@ -1,0 +1,8 @@
+logo : img/Sepori_log2.gif
+
+#フットノートの設定
+footnote : "© 2018 SEPTENI ORIGINAL,Inc."
+
+
+#スライドのページ数表示の設定
+slide-number: true
