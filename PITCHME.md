@@ -399,11 +399,6 @@ scala> class Glass[+A](val value: A) {
 しかしimmutableなクラスであれば型は壊れません。
 こちらは後ほどお話します。
 ---
-
-immutableなクラスであれば型は壊れませんので、共変の型を引数に
-持ってくるために、この制約を緩和するのが下限境界になります。
-
----
 ```scala
 sealed abstract class List[+A] extends AbstractSeq[A]
 
