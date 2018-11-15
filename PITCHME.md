@@ -178,7 +178,7 @@ scala> val glassDrink: Glass[Drink] = new Glass[Water](new Water)
 
 ```
 WaterがDrinkのサブタイプであっても
-Glass[Water]型をGlass[Drink]型に適応することができません。
+Glass[Water]型をGlass[Drink]型に適合することができません。
 
 ---?image=img/w2w_ok.png&position=top&size=60%
 
@@ -191,7 +191,7 @@ scala> val glassWater: Glass[Water] = new Glass[Water](new Water)
 glassWater: Glass[Water] = Glass@6874517b
 ```
 
-もちろん同じ型であれば、適応できます。
+もちろん同じ型であれば、適合できます。
 
 ---
 
@@ -209,7 +209,7 @@ glassWater: Glass[Water] = Glass@6874517b
 
 ---
 
-#### でも型パラメータで定義したクラスにも
+#### しかし型パラメータで定義したクラスにも
 
 #### サブタイプの関係を利用したい場合もあります
 
@@ -230,7 +230,7 @@ scala> val glassDrink: Glass[Drink] = new Glass[Water](new Water)
 glassDrink: Glass[Drink] = Glass@59dfd52c
 ```
 
-Glass[Water]型をGlass[Drink]型に適応できました。
+Glass[Water]型をGlass[Drink]型に適合できました。
 
 ---
 
@@ -305,7 +305,7 @@ List[Int]をList[Any]に適合できます。
 <img src="https://github.com/taketora26/sample_gitpitch/blob/kansai/img/kaisou.png?raw=true"  width="300">
 
 サブタイプの関係を使えるので、
-ボトムタイプのNothing型を全ての型に適応できます。
+ボトムタイプのNothing型を全ての型に適合できます。
 
 ```scala
 case object Nil extends List[Nothing]
@@ -411,11 +411,11 @@ sealed abstract class List[+A] extends AbstractSeq[A]
 
 Aの任意のスーパータイプの値が入ることを
 
-理解でるようになります。
+理解できるようになります。
 
 immutableなので新しいインスタンスを作る際
 
-正しいスーパータイプの値が入るので、型としても問題ありません。
+正しいスーパータイプの値が入り、型としても問題ありません。
 
 
 ---
